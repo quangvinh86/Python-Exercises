@@ -4,12 +4,17 @@
 Lúc bắt đầu tự học Python, theo thói quen khi học các ngôn ngữ lập trình là làm nhiều, thật nhiều. Lang thang trên mạng, "nhặt" được bí kíp "võ công" của mấy bạn Trung Quốc. Lúc mình nhặt được chỉ có tên bài tập, hiện tại đã thấy các bạn bên TQ đưa ra solution và lời giải cho từng bài.
 Mặc dù vây nhưng ==mình thích thì mình cứ làm thôi.==
 
-Bí cấp được chia làm 4 cấp độ theo từng dạng:
+Theo các bạn Trung Quốc thì bí cấp được chia làm 4 cấp độ theo từng dạng:
+
 1. Level 1	Beginner: Dành cho những người mới học Python hoặc mới bắt đầu học một ngôn ngữ lập trình. Hầu hết cách giải quyết bài toán đều rất đơn giản. Có thể tìm thấy giải pháp để giải quyết trong python docs.
 
 2. Level 2	Intermediate: Các bài toán dành cho người đã học xong Python cơ bản hoặc chuyển từ ngôn ngữ lập trình khác sang Python. Cách giải quyết các bài toán level 2 cần đầu tư một chút "trí tuệ". Các giải pháp không chỉ nằm trong python docs.
 
 3. Level 3	Advanced: Sử dụng ngôn ngữ lập trình Python, một số thư viện, cấu trúc dữ liệu và giải thuật để giải quyết một số bài toán phức tạp.
+
+Nhưng khi làm bài thì mình thấy các bài tập sắp xếp lộn xộn, bài level 1 cho vào level2,3 và ngược lại. Chắc kiểu "tung hỏa mù", luyện không cẩn thẩn lại thành "tẩu hỏa nhập ma". 
+
+Vì vậy mình chỉ đánh dấu 1_, 2_, 3_ cho các bài mà không chia thành các level nữa.
 
 Mình đã code hầu hết các bài trong danh sách bài của các bạn TQ nhưng nó không đúng chuẩn của một Pythonista và lại còn code trên Python2 nên mình sẽ làm lại dần dần chuyển sang Python3 và theo đúng chuẩn PEP8 (https://www.python.org/dev/peps/pep-0008/).
 
