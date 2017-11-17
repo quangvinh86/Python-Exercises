@@ -1,86 +1,67 @@
 '''
 Question:
-A robot moves in a plane starting from the original point (0,0).
-The robot can move toward UP, DOWN, LEFT and RIGHT with a given
-steps. The trace of robot movement is shown as the following:
-UP 5
-DOWN 3
-LEFT 3
-RIGHT 2
-
-The numbers after the direction are steps. Please write a program
- to compute the distance from current position after a sequence of
-  movement and original point. If the distance is a float, then
-   just print the nearest integer.
-Example:
-If the following tuples are given as input to the program:
-UP 5
-DOWN 3
-LEFT 3
-RIGHT 2
-Then, the output of the program should be:
-2
+Write a program to compute the frequency of the words from the input.
+ The output should output after sorting the key alphanumerically.
+Suppose the following input is supplied to the program:
+New to Python or choosing between Python 2 and Python 3? \
+Read Python 2 or Python 3.
+Then, the output should be:
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1
 
 Đề bài:
-Một robot được lập trình di chuyển trên một hệ tọa độ (X,Y).
-Bắt đầu từ vị trí (0,0), mỗi lần di chuyển, robot chỉ đi được một
-hướng với một số bước.
-Ví dụ:
-UP 5 --> Di chuyển 5 bước về phía Y+ đến tọa độ (0, 5)
-DOWN 3 --> Di chuyển 3 bước về phía Y- đến tọa độ (0, 2)
-LEFT 3 --> Di chuyển 3 bước về X- đến tọa độ (-3, 2)
-RIGHT 2 --> Di chuyển 2 bước về X+ đến tọa độ (-1, 2)
-
-Yêu cầu: Viết một chương trình tính khoảng cách sau một số bước đi
- của robot đến vị trí ban đầu. (nếu khoảng cách là số thực, chuyển
- nó về số nguyên)
-Giả sử các bước đi được nhập từ bàn phím hoặc nhập sẵn trong file.
+Viết một chương trình nhận đầu vào là một chuỗi các từ.
+Hãy tính số lần lặp lại của từng từ trong chuỗi.
 
 Ví dụ:
-UP 5
-DOWN 3
-LEFT 3
-RIGHT 2
+New to Python or choosing between Python 2 and Python 3? \
+Read Python 2 or Python 3.
 Then, the output of the program should be:
-2
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1
 
 Gợi ý:
-- Sử dụng tuple, list để lưu vị trí của robot
-- Khoảng cách chính là đường chéo trong tam giác vuông.
-Có thể tính ra bằng công thức pitagos c^2 = a^2 + b^2
+- Sử dụng dictionary để lưu giữ các giá trị.
 '''
 
-import math
 
-
-STEP_OF_ROBOT= "UP 5\nDOWN 3\nLEFT 3\nRIGHT 2"
-
-
-def calculate_distance(input_string):
+def count_frequency(input_string):
     '''
     '   Params: string
-    '   rtype: nothing
+    '   rtype: dictionary
     '''
-    steps = [step.split(" ") for step in input_string.split("\n")]
-    robo_pos = [0, 0]
-    for step in steps:
-        if step[0] == 'UP':
-            robo_pos[1] += int(step[1])
-        elif  step[0] == 'DOWN':
-            robo_pos[1] -= int(step[1])
-        elif  step[0] == 'LEFT':
-            robo_pos[0] -= int(step[1])
-        elif  step[0] == 'RIGHT':
-            robo_pos[0] += int(step[1])
+    words_dict = {}
+    for value in input_string.split(" "):
+        if value in words_dict:
+            words_dict[value] += 1
         else:
-            break
-    return int(math.sqrt(robo_pos[0] * robo_pos[0] + robo_pos[1] * robo_pos[1]))
+            words_dict[value] = 1
+    return words_dict
 
 
 def main():
-    input_string = STEP_OF_ROBOT
-    print(input_string.split("\n"))
-    print(calculate_distance(input_string))
+    input_string = "New to Python or choosing between Python 2 and Python 3? "
+    input_string += "Read Python 2 or Python 3."
+    print(input_string)
+    print(count_frequency(input_string))
 
 
 if __name__ == "__main__":

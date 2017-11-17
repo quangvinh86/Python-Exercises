@@ -59,7 +59,7 @@ STEP_OF_ROBOT = "UP 5\nDOWN 3\nLEFT 3\nRIGHT 2"
 def calculate_distance(input_string):
     '''
     '   Params: string
-    '   rtype: nothing
+    '   rtype: int
     '''
     steps = [step.split(" ") for step in input_string.split("\n")]
     robo_pos = [0, 0]
