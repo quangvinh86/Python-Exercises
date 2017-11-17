@@ -51,7 +51,7 @@ def check_valid_string_rule(password, rule_string):
     return any([bool(single_char in rule_string) for single_char in password])
 
 
-def check_valid_password(input_string):
+def check_valid_passwords(input_string):
     ''' Get a string that contains some password, separates by comma
     '   check valid password by 5 rules
     '   Params: String
@@ -74,7 +74,7 @@ def check_valid_password(input_string):
 def main():
     input_string = "ABd1234@1,a F1#,2w3E*,2We3345,1q2w3e4rA@"
     print(input_string)
-    print(','.join(check_valid_password(input_string)))
+    print(','.join(check_valid_passwords(input_string)))
 
 
 if __name__ == "__main__":

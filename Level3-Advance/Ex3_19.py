@@ -39,6 +39,7 @@ def unpack_score(input_string):
     items = input_string.split(",")
     return (items[0], int(items[1]), int(items[2]))
 
+
 def sort_tuple(input_string):
     ''' sort list of tuple
     '   Params: String
@@ -58,7 +59,6 @@ def main():
     input_string += "Json,21,85"
     print(input_string)
     print(sort_tuple(input_string))
-
 
 
 if __name__ == "__main__":
